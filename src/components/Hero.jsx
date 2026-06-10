@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 function useCountUp(target, duration = 1500, triggered = false) {
   const [count, setCount] = useState(0);
 
