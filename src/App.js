@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Clients from './components/Clients';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Projects />
       <Clients />
       <Gallery />
+      <Contact />
     </div>
   );
 }
