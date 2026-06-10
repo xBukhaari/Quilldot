@@ -1,65 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
+import useInView from '../hooks/useInView';
 
-// ─────────────────────────────────────────────
-// CUSTOM HOOK: useInView
-//
-// This hook tells us when an element has scrolled
-// into the visible part of the screen.
-//
-// It returns two things:
-//   ref     — attach this to any JSX element
-//   visible — a boolean that flips to true once
-//             that element enters the viewport
-//
-// We'll reuse this hook in every section going
-// forward, so remember how it works.
-// ─────────────────────────────────────────────
-function useInView(threshold = 0.15) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    // Store the element ref.current is pointing at.
-    // We do this because ref.current can change, and
-    // we want the cleanup to disconnect the right observer.
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // entry.isIntersecting is true when the element
-        // crosses the threshold into the viewport
-        if (entry.isIntersecting) {
-          setVisible(true);
-          // We unobserve immediately after — we only want
-          // the animation to fire once, not every time
-          // the user scrolls past it
-          observer.unobserve(el);
-        }
-      },
-      { threshold }
-      // threshold: 0.15 means "fire when 15% of the
-      // element is visible". 0 = any pixel, 1 = fully visible
-    );
-
-    observer.observe(el);
-
-    // Cleanup: disconnect the observer when the
-    // component unmounts
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return [ref, visible];
-}
-
-// ─────────────────────────────────────────────
-// COMPONENT: ValueCard
-//
-// The three stacked cards on the right column.
-// Each one gets a left red border and fades in
-// with a delay based on its index, so they
-// cascade in one after another.
-// ─────────────────────────────────────────────
 function ValueCard({ label, text, index, visible }) {
   return (
     <div style={{
