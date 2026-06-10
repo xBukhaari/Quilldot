@@ -168,7 +168,7 @@ export default function Services() {
           maxWidth: '520px',
           marginBottom: '16px',
         }}>
-          Eight Core <span style={{ color: '#CC1F2D' }}>Service Lines</span>
+          Eight Core <span style={{ color: '#CC1F2D',  textAlign: 'center' }}>Service Lines</span> 
         </h2>
 
         <p style={{

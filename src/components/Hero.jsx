@@ -1,16 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-
-// ─────────────────────────────────────────────
-// CUSTOM HOOK: useCountUp
-//
-// A custom hook is just a regular function whose
-// name starts with "use". Inside it, you can call
-// other hooks like useState and useEffect.
-//
-// This one animates a number from 0 to `target`
-// over `duration` milliseconds, but only starts
-// when `triggered` becomes true.
-// ─────────────────────────────────────────────
 function useCountUp(target, duration = 1500, triggered = false) {
   const [count, setCount] = useState(0);
 
@@ -91,6 +79,7 @@ function StatCard({ value, suffix, label, triggered }) {
 // come from a CMS or API.
 // ─────────────────────────────────────────────
 const STATS = [
+
   { value: 4,  suffix: '+', label: 'Active Projects'    },
   { value: 60, suffix: 'T', label: 'Tonnes Under Build'  },
   { value: 7,  suffix: '+', label: 'Major Clients'       },
@@ -122,16 +111,12 @@ export default function Hero() {
   };
 
   return (
-    <section style={{
-      minHeight: '100vh',
-      backgroundColor: '#0D0D0D',
-      position: 'relative',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      padding: '120px 5% 80px',
-    }}>
+<section style={{
+  minHeight: '100vh', display: 'flex', flexDirection: 'column',
+  justifyContent: 'center', padding: '8rem 10vw 4rem',
+  position: 'relative', overflow: 'hidden',
+  textAlign: 'center', alignItems: 'center',
+}}>
 
       {/* Background grid
           This is pure CSS — two overlapping linear-gradients
@@ -191,19 +176,18 @@ export default function Hero() {
         </h1>
 
         <p style={{
-          color: '#8A94A6',
-          fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-          maxWidth: '500px',
-          lineHeight: '1.8',
-          marginBottom: '40px',
-        }}>
+  fontFamily: 'var(--sans)', fontSize: '15px', lineHeight: 1.9,
+  color: 'var(--text-mute)', fontWeight: 300, maxWidth: '520px',
+  margin: '0 auto 3.5rem', animation: 'fadeUp 0.8s 0.75s ease both',
+  textAlign: 'center', width: '100%',
+   }}> 
           Quilldot Limited designs, constructs, and installs LNG, LPG,
           CNG, and solar energy infrastructure across Nigeria — with
           international-standard safety and a commitment to clean energy.
         </p>
 
         {/* CTA Buttons */}
-        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', animation: 'fadeUp 0.8s 0.95s ease both' }}>
           <button
             onClick={() => scrollTo('services')}
             style={{
@@ -247,7 +231,9 @@ export default function Hero() {
           paddingTop: '40px',
           borderTop: '1px solid rgba(255,255,255,0.08)',
           flexWrap: 'wrap',
+          alignItems: 'center'
         }}>
+            
           {STATS.map((stat) => (
             <StatCard
               key={stat.label}
