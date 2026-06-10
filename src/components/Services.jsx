@@ -165,19 +165,17 @@ export default function Services() {
           color: 'white',
           lineHeight: '1.05',
           letterSpacing: '-0.5px',
-          maxWidth: '520px',
           marginBottom: '16px',
         }}>
-          Eight Core <span style={{ color: '#CC1F2D',  textAlign: 'center' }}>Service Lines</span> 
+          Eight Core <span style={{ color: '#CC1F2D' }}>Service Lines</span>
         </h2>
 
         <p style={{
           color: '#8A94A6',
           fontSize: '0.92rem',
           lineHeight: '1.8',
-          maxWidth: '480px',
         }}>
-          From concept to commissioning — complete energy infrastructure
+          From concept to commissioning. Complete energy infrastructure
           delivered with precision engineering and safety at every step.
         </p>
       </div>

@@ -45,7 +45,7 @@ const VALUES = [
   },
   {
     label: 'Safety Commitment',
-    text: 'We implement strict engineering standards, risk assessments, instrument calibration, pressure testing, and quality control procedures — protecting personnel, assets, and the environment on every project.',
+    text: 'We implement strict engineering standards, risk assessments, instrument calibration, pressure testing, and quality control procedures. These measures are designed to protect personnel, assets, and the environment on every project. We minimize the likelihood of operational failures. Our commitment ensures that each project benefits from evolving industry best practices.',
   },
 ];
 
@@ -53,9 +53,7 @@ const VALUES = [
 // COMPONENT: About
 // ─────────────────────────────────────────────
 export default function About() {
-  // We attach this ref to the whole section.
-  // Once 15% of it is visible, `visible` flips true
-  // and all the animations trigger.
+
   const [ref, visible] = useInView(0.15);
 
   return (

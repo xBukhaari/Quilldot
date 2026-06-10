@@ -224,15 +224,15 @@ export default function Hero() {
         </div>
 
         {/* Stat counters */}
-        <div style={{
-          display: 'flex',
-          gap: 'clamp(24px, 5vw, 56px)',
-          marginTop: '64px',
-          paddingTop: '40px',
-          borderTop: '1px solid rgba(255,255,255,0.08)',
-          flexWrap: 'wrap',
-          alignItems: 'center'
-        }}>
+<div style={{
+  display: 'flex',
+  justifyContent: 'center', 
+  gap: 'clamp(24px, 5vw, 56px)',
+  marginTop: '64px',
+  paddingTop: '40px',
+  borderTop: '1px solid rgba(255,255,255,0.08)',
+  flexWrap: 'wrap',
+}}>
             
           {STATS.map((stat) => (
             <StatCard

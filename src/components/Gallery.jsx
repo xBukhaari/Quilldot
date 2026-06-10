@@ -217,7 +217,6 @@ export default function Gallery() {
           color: '#8A94A6',
           fontSize: '0.92rem',
           lineHeight: '1.8',
-          maxWidth: '460px',
         }}>
           A look at our teams and infrastructure builds across Nigeria.
           Click any image to view full screen.

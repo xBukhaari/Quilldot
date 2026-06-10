@@ -118,7 +118,6 @@ export default function Projects() {
           color: 'rgba(255,255,255,0.5)',
           fontSize: '0.92rem',
           lineHeight: '1.8',
-          maxWidth: '460px',
         }}>
           Four active LPG plant builds at various stages of completion
           across Nigeria. Each project is delivered under strict safety
@@ -133,7 +132,6 @@ export default function Projects() {
           display: 'flex',
           flexDirection: 'column',
           gap: '36px',
-          maxWidth: '720px',
         }}
       >
         {PROJECTS.map((project, index) => (
