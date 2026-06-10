@@ -16,7 +16,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const navLinks = ['About', 'Services', 'Projects', 'Clients', 'Contact'];
+  const navLinks = ['About', 'Services', 'Projects', 'Gallery', 'Clients', 'Contact'];
 
   const scrollToSection = (id) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
