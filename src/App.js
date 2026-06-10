@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div style={{ height: '200vh', paddingTop: '100px', paddingLeft: '40px' }}>
+        <h1 style={{ color: 'white' }}>Scroll down to test the navbar</h1>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <div>
+      <h1>Quilldot</h1>
+    </div>
+  );
+}
